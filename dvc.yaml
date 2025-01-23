@@ -1,0 +1,7 @@
+stages:
+  convert_data:
+    cmd: python src/utils/xml2csv.py data/data.xml data/data.csv
+    deps:
+    - data/data.xml
+    outs:
+    - data/data.csv

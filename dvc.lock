@@ -1,0 +1,14 @@
+schema: '2.0'
+stages:
+  convert_data:
+    cmd: python src/utils/xml2csv.py data/data.xml data/data.csv
+    deps:
+    - path: data/data.xml
+      hash: md5
+      md5: dde0af8371bde3d3656918b4a3f3cb62
+      size: 14445121
+    outs:
+    - path: data/data.csv
+      hash: md5
+      md5: da61166615498858c698d63ca0b7733d
+      size: 10340108
