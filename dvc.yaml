@@ -3,5 +3,6 @@ stages:
     cmd: python src/utils/xml2csv.py data/data.xml data/data.csv
     deps:
     - data/data.xml
+    - src/utils/xml2csv.py
     outs:
     - data/data.csv
