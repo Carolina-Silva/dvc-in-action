@@ -1,5 +1,0 @@
-outs:
-- md5: 6eb42d8c725cf91c35377541aa8deed0
-  size: 593
-  hash: md5
-  path: xml2csv.py
