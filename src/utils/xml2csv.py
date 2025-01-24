@@ -12,7 +12,6 @@ if __name__ == "__main__":
     parser.add_argument("input", help="Caminha para o XML de entrada")
     parser.add_argument("output", help="Caminho para salvar CSV")
     args = parser.parse_args()
-    print(args.output)
     
     
     xml_to_csv(args.input, args.output)
