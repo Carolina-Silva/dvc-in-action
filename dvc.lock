@@ -7,6 +7,10 @@ stages:
       hash: md5
       md5: dde0af8371bde3d3656918b4a3f3cb62
       size: 14445121
+    - path: src/utils/xml2csv.py
+      hash: md5
+      md5: 6eb42d8c725cf91c35377541aa8deed0
+      size: 593
     outs:
     - path: data/data.csv
       hash: md5
