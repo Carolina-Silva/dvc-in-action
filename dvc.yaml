@@ -6,3 +6,9 @@ stages:
     - src/utils/xml2csv.py
     outs:
     - data/data.csv
+  process_data:
+    cmd: python src/utils/process_data.py data/data.csv data/processed_data.csv
+    deps:
+    - data/data.csv
+    outs:
+    - data/processed_data.csv

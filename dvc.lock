@@ -16,3 +16,15 @@ stages:
       hash: md5
       md5: da61166615498858c698d63ca0b7733d
       size: 10340108
+  process_data:
+    cmd: python src/utils/process_data.py data/data.csv data/processed_data.csv
+    deps:
+    - path: data/data.csv
+      hash: md5
+      md5: da61166615498858c698d63ca0b7733d
+      size: 10340108
+    outs:
+    - path: data/processed_data.csv
+      hash: md5
+      md5: 5aca583829b7d019722dde2453a05aa5
+      size: 10067768
