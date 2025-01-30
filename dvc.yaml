@@ -14,10 +14,12 @@ stages:
     - data/processed_data.csv
   train_model:
     cmd: python src/utils/train_model.py data/processed_data.csv models/model.pkl
+      reports/metrics.json reports/roc_curve.png
     deps:
     - data/processed_data.csv
     outs:
     - models/model.pkl
+    - reports/roc_curve.png
     metrics:
-    - metrics.json:
+    - reports/metrics.json:
         cache: false

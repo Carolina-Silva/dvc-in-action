@@ -30,17 +30,22 @@ stages:
       size: 10067768
   train_model:
     cmd: python src/utils/train_model.py data/processed_data.csv models/model.pkl
+      reports/metrics.json reports/roc_curve.png
     deps:
     - path: data/processed_data.csv
       hash: md5
       md5: 5aca583829b7d019722dde2453a05aa5
       size: 10067768
     outs:
-    - path: metrics.json
-      hash: md5
-      md5: 9bf3aca1462823f8e034b3039b19dd45
-      size: 25
     - path: models/model.pkl
       hash: md5
       md5: 37a176df608defe302c9aa08c822864c
       size: 8182281
+    - path: reports/metrics.json
+      hash: md5
+      md5: 8be51cc33bc0c23a2772095ac7f5ede1
+      size: 56
+    - path: reports/roc_curve.png
+      hash: md5
+      md5: 33d73b667879f4d45ca0678a1902cf82
+      size: 30910
