@@ -30,9 +30,9 @@ def train_model(input_csv, output_model, metrics_path, plot_path):
     X = df[['ViewCount', 'AnswerCount', 'CommentCount']].fillna(0)
     y = (df['Score'] > df['Score'].mean()).astype(int)  # 1 para pontuação alta, 0 caso contrário
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=None)
 
-    model = RandomForestClassifier(random_state=42)
+    model = RandomForestClassifier(n_estimators=1, max_depth=2, random_state=42)
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)

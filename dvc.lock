@@ -39,13 +39,13 @@ stages:
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: 37a176df608defe302c9aa08c822864c
-      size: 8182281
+      md5: f2cc0071c826f244f31dd58514520e70
+      size: 2745
     - path: reports/metrics.json
       hash: md5
-      md5: 8be51cc33bc0c23a2772095ac7f5ede1
-      size: 56
+      md5: 735638622b90ea5241b11e26b69ebf62
+      size: 69
     - path: reports/roc_curve.png
       hash: md5
-      md5: 33d73b667879f4d45ca0678a1902cf82
-      size: 30910
+      md5: e5777bc8c5b4d9c4578d67521b613d3d
+      size: 30753
