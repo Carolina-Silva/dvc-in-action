@@ -1,12 +1,12 @@
 schema: '2.0'
 stages:
   convert_data:
-    cmd: python src/utils/xml2csv.py data/data.xml data/data.csv
+    cmd: python src/utils/xml2csv.py data/posts_100.xml data/data.csv
     deps:
     - path: data/data.xml
       hash: md5
-      md5: dde0af8371bde3d3656918b4a3f3cb62
-      size: 14445121
+      md5: 059f35f3b3fb8ed8bba7141764f68fc9
+      size: 60230
     - path: src/utils/xml2csv.py
       hash: md5
       md5: 3d5c893b5ce3fff8414391ede5eb5046
@@ -14,20 +14,20 @@ stages:
     outs:
     - path: data/data.csv
       hash: md5
-      md5: da61166615498858c698d63ca0b7733d
-      size: 10340108
+      md5: ce062a12626ceef6dd659792935b6ca9
+      size: 1401
   process_data:
     cmd: python src/utils/process_data.py data/data.csv data/processed_data.csv
     deps:
     - path: data/data.csv
       hash: md5
-      md5: da61166615498858c698d63ca0b7733d
-      size: 10340108
+      md5: ce062a12626ceef6dd659792935b6ca9
+      size: 1401
     outs:
     - path: data/processed_data.csv
       hash: md5
-      md5: 5aca583829b7d019722dde2453a05aa5
-      size: 10067768
+      md5: 5af45435649f5adf038157eac529219a
+      size: 1394
   train_model:
     cmd: python src/utils/train_model.py data/processed_data.csv models/model.pkl
       reports/metrics.json reports/roc_curve.png
