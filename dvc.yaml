@@ -10,16 +10,17 @@ stages:
     cmd: python src/utils/process_data.py data/data.csv data/processed_data.csv
     deps:
     - data/data.csv
+    - src/utils/process_data.py  
     outs:
     - data/processed_data.csv
-  train_model:
-    cmd: python src/utils/train_model.py data/processed_data.csv models/model.pkl
-      reports/metrics.json reports/roc_curve.png
-    deps:
-    - data/processed_data.csv
-    outs:
-    - models/model.pkl
-    - reports/roc_curve.png
-    metrics:
-    - reports/metrics.json:
-        cache: false
+  # train_model:
+  #   cmd: python src/utils/train_model.py data/processed_data.csv models/model.pkl
+  #     reports/metrics.json reports/roc_curve.png
+  #   deps:
+  #   - data/processed_data.csv
+  #   outs:
+  #   - models/model.pkl
+  #   - reports/roc_curve.png
+  #   metrics:
+  #   - reports/metrics.json:
+  #       cache: false
